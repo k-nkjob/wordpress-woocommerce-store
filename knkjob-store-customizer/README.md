@@ -1,32 +1,21 @@
-# KNKJOB Store Customizer v0.2.1
+# KNKJOB Store Customizer v0.9.0
 
-## What this update does
-- Creates a dedicated EC home page and sets it as the WordPress front page.
-- Hero section, category cards, latest products, value/tech sections.
-- Breadcrumb: Home -> Shop -> Category -> Product.
-- Removes Sample Page from classic/block navigation output.
-- Responsive product archive styling.
-- Product-card category labels and NEW badges.
-- Product detail styling, shipping note, demo notice.
-- Low-stock messaging.
-- Custom product spec tab.
-- Adds WooCommerce admin fields for Material and Shipping note.
-- Cart / Checkout demo notice.
-- Does not modify WooCommerce core or the parent theme.
+v0.9.0 replaces theme-dependent shell retrofitting with a plugin-owned storefront shell.
 
-## Update
-Upload this ZIP from:
-WordPress Admin -> Plugins -> Add Plugin -> Upload Plugin.
+## Why
 
-Because v0.1 is already installed, WordPress should show a screen asking whether to replace the current plugin with the uploaded version. Choose Replace current with uploaded.
+The active block theme kept adding max-width/padding wrappers around its Header/Footer.
+That made Header and Home appear to use different horizontal lines even after multiple
+container-width fixes.
 
-## After activation/update
-If the front page does not change immediately, deactivate and reactivate this plugin once. The activation hook creates `store-home` and assigns it as the front page.
+## What changed
 
-## Rollback
-Keep your previous v0.1 ZIP. Re-uploading the old ZIP will revert the customizer code.
+- Plugin-owned Header
+- Plugin-owned Footer
+- Theme Header/Footer hidden on customized storefront
+- One `.knk-container` width for Header / Home / Shop / Product / Cart / Checkout / My Account / Footer
+- Container max width: 1400px
+- Responsive gutters: 24–48px
+- Home hero uses the same exact container line as Header/Footer
 
-## v0.2.1 cleanup
-- Site title is normalized to `KNKJOB STORE`.
-- Default `Sample Page / サンプルページ` is removed from dynamic block navigation too.
-- Duplicate `KNKJOB STORE` navigation item is suppressed when the theme already shows the site title.
+All prior carousel, product-card, button-label, cart, demo notice and responsive fixes remain included.

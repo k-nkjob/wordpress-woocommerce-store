@@ -1,0 +1,23 @@
+:root{
+  --knk-bg:#f6f5f1;
+  --knk-ink:#111;
+  --knk-muted:#6d6b64;
+  --knk-line:#d9d7cf;
+  --knk-card:#fff;
+  --knk-container:1400px;
+  --knk-grid-gap:18px;
+}
+
+html{scroll-behavior:smooth}
+body.knkjob-store-customized{background:#fff;color:var(--knk-ink)}
+body.knkjob-store-customized .wp-site-blocks{padding-top:0;padding-bottom:0}
+.knkjob-store-customized a{transition:opacity .2s ease}
+.knkjob-store-customized a:hover{opacity:.78}
+
+.woocommerce .woocommerce-info,
+.woocommerce .woocommerce-message,
+.woocommerce .woocommerce-error{
+  border:1px solid var(--knk-line)!important;
+  background:#fff!important;
+  color:#111!important;
+}

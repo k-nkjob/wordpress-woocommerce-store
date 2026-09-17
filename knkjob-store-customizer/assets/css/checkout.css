@@ -1,0 +1,3 @@
+/* CHECKOUT MODULE ONLY */
+.woocommerce-checkout .wc-block-checkout,
+.woocommerce-checkout form.checkout{max-width:var(--knk-container);margin-inline:auto}

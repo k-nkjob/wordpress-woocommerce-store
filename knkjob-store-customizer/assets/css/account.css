@@ -1,0 +1,4 @@
+/* MY ACCOUNT MODULE ONLY */
+.woocommerce-account .woocommerce-LostPassword.lost_password{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.woocommerce-account .knk-account-demo-note{font-size:.9em;color:#666;text-decoration:none}
+@media (max-width:640px){.woocommerce-account .woocommerce-LostPassword.lost_password{gap:8px}.woocommerce-account .knk-account-demo-note{flex-basis:100%}}
