@@ -1,12 +1,8 @@
-/* GLOBAL LAYOUT FOUNDATION
- *
- * The plugin owns the visible store shell and uses the same centered container
- * everywhere. Theme header/footer geometry is intentionally not reused.
- */
+/* GLOBAL LAYOUT FOUNDATION */
 
 :root{
-  --knk-container:1400px;
-  --knk-gutter:clamp(24px,3vw,48px);
+  --knk-container:1320px;
+  --knk-gutter:clamp(20px,3vw,44px);
 }
 
 .knk-container,
@@ -47,4 +43,19 @@ body.woocommerce-checkout main,
 body.woocommerce-account main{
   padding-left:0!important;
   padding-right:0!important;
+  padding-top:42px!important;
+  padding-bottom:58px!important;
+}
+
+@media (max-width:640px){
+  :root{--knk-gutter:18px}
+  body.post-type-archive-product main,
+  body.tax-product_cat main,
+  body.tax-product_tag main,
+  body.single-product main,
+  body.woocommerce-cart main,
+  body.woocommerce-checkout main,
+  body.woocommerce-account main{
+    padding-top:28px!important;
+  }
 }
