@@ -34,16 +34,6 @@ body.knkjob-store-customized footer.wp-block-template-part{
   letter-spacing:-.035em;
   white-space:nowrap;
 }
-.knk-shell-brand::after{
-  content:"";
-  display:inline-block;
-  width:7px;
-  height:7px;
-  margin-left:8px;
-  border-radius:50%;
-  background:var(--knk-accent);
-  vertical-align:top;
-}
 .knk-shell-nav{
   display:flex;
   align-items:center;
