@@ -1,4 +1,64 @@
 /* MY ACCOUNT MODULE ONLY */
-.woocommerce-account .woocommerce-LostPassword.lost_password{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.woocommerce-account .knk-account-demo-note{font-size:.9em;color:#666;text-decoration:none}
-@media (max-width:640px){.woocommerce-account .woocommerce-LostPassword.lost_password{gap:8px}.woocommerce-account .knk-account-demo-note{flex-basis:100%}}
+
+.woocommerce-account .woocommerce{
+  display:grid;
+  grid-template-columns:minmax(180px,240px) minmax(0,1fr);
+  gap:20px;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation,
+.woocommerce-account .woocommerce-MyAccount-content,
+.woocommerce-account form.login,
+.woocommerce-account form.register{
+  border:1px solid var(--knk-line)!important;
+  border-radius:18px!important;
+  background:#fff!important;
+  box-shadow:var(--knk-shadow-sm)!important;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation{padding:14px!important}
+.woocommerce-account .woocommerce-MyAccount-navigation ul{margin:0!important;padding:0!important;list-style:none!important}
+.woocommerce-account .woocommerce-MyAccount-navigation li a{
+  display:block;
+  padding:10px 12px;
+  border-radius:10px;
+  color:#4f5d57!important;
+  text-decoration:none!important;
+  font-size:13px;
+  font-weight:650;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation li.is-active a{
+  background:var(--knk-accent-soft);
+  color:var(--knk-accent)!important;
+}
+.woocommerce-account .woocommerce-MyAccount-content{padding:24px!important}
+.woocommerce-account form.login,
+.woocommerce-account form.register{padding:24px!important}
+.woocommerce-account input{
+  min-height:44px!important;
+  border:1px solid var(--knk-line)!important;
+  border-radius:10px!important;
+}
+.woocommerce-account button.button{
+  min-height:44px!important;
+  padding:0 18px!important;
+  background:var(--knk-accent)!important;
+  color:#fff!important;
+}
+.woocommerce-account .woocommerce-LostPassword.lost_password{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+.woocommerce-account .knk-account-demo-note{
+  color:var(--knk-muted);
+  font-size:.82em;
+  text-decoration:none;
+}
+
+@media (max-width:760px){
+  .woocommerce-account .woocommerce{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .woocommerce-account .woocommerce-LostPassword.lost_password{gap:8px}
+  .woocommerce-account .knk-account-demo-note{flex-basis:100%}
+}
