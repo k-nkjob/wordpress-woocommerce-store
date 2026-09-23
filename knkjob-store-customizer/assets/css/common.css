@@ -1,23 +1,75 @@
 :root{
-  --knk-bg:#f6f5f1;
-  --knk-ink:#111;
-  --knk-muted:#6d6b64;
-  --knk-line:#d9d7cf;
-  --knk-card:#fff;
-  --knk-container:1400px;
-  --knk-grid-gap:18px;
+  --knk-bg:#f6f4ef;
+  --knk-bg-soft:#f0eee8;
+  --knk-surface:#ffffff;
+  --knk-surface-soft:#fbfaf7;
+  --knk-ink:#1c211f;
+  --knk-muted:#66706b;
+  --knk-line:#dedfd9;
+  --knk-line-strong:#cfd2cb;
+  --knk-card:#ffffff;
+  --knk-accent:#245a4b;
+  --knk-accent-dark:#193f35;
+  --knk-accent-soft:#e8f0ed;
+  --knk-warm:#b8784e;
+  --knk-warm-soft:#f5ebe3;
+  --knk-danger:#b53f3f;
+  --knk-container:1320px;
+  --knk-grid-gap:20px;
+  --knk-radius-sm:10px;
+  --knk-radius:18px;
+  --knk-radius-lg:28px;
+  --knk-shadow-sm:0 8px 24px rgba(39,48,44,.06);
+  --knk-shadow:0 20px 56px rgba(39,48,44,.10);
 }
 
 html{scroll-behavior:smooth}
-body.knkjob-store-customized{background:#fff;color:var(--knk-ink)}
+body.knkjob-store-customized{
+  background:var(--knk-bg-soft);
+  color:var(--knk-ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.7;
+}
 body.knkjob-store-customized .wp-site-blocks{padding-top:0;padding-bottom:0}
-.knkjob-store-customized a{transition:opacity .2s ease}
-.knkjob-store-customized a:hover{opacity:.78}
+
+.knkjob-store-customized *,
+.knkjob-store-customized *::before,
+.knkjob-store-customized *::after{box-sizing:border-box}
+
+.knkjob-store-customized h1,
+.knkjob-store-customized h2,
+.knkjob-store-customized h3{
+  color:var(--knk-ink);
+  text-wrap:balance;
+  word-break:keep-all;
+  overflow-wrap:normal;
+}
+
+.knkjob-store-customized a{
+  color:inherit;
+  transition:color .18s ease,background-color .18s ease,border-color .18s ease,opacity .18s ease,transform .18s ease;
+}
+.knkjob-store-customized a:hover{opacity:1}
+
+.knkjob-store-customized :focus-visible{
+  outline:3px solid rgba(36,90,75,.28)!important;
+  outline-offset:3px;
+}
 
 .woocommerce .woocommerce-info,
 .woocommerce .woocommerce-message,
 .woocommerce .woocommerce-error{
   border:1px solid var(--knk-line)!important;
+  border-radius:var(--knk-radius-sm)!important;
   background:#fff!important;
-  color:#111!important;
+  color:var(--knk-ink)!important;
+  box-shadow:var(--knk-shadow-sm)!important;
+}
+
+.woocommerce button.button,
+.woocommerce a.button,
+.woocommerce input.button,
+.wc-block-components-button{
+  border-radius:999px!important;
+  font-weight:700!important;
 }
